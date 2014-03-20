@@ -1,0 +1,21 @@
+<% flash.each do |key, value| %>
+    <div class="alert alert-warning">
+      <%= value %>
+      <a class="close" data-dismiss="alert">×</a>
+    </div>
+<% end %>
+
+
+<%= @zaps.length %>
+Zaps
+<p></p>
+
+<% @zaps.each do |z| %>
+    <p>
+      <%= z.student.name %>
+      <%= z.assignment.name %>
+      <%= link_to 'x', z,
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+    </p>
+<% end %>

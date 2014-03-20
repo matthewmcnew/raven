@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+ben:
+  first_name: Ben
+  last_name: Zed
+
+Cann:
+  first_name: Cann
+  last_name: Ada

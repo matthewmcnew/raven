@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@assignment, url: zaps_path) do |f| %>
+        </br>
+        <%= label_tag(:students, "Students") %>
+        <%= text_field_tag :students,  params[:students] %>
+        </br>
+        <%= f.label :name, "Assignment Name" %>
+        <%= f.text_field :name %>
+
+        <%= f.submit "Save", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#students").tokenInput("/students/search", {preventDuplicates: true });
+    });
+</script>

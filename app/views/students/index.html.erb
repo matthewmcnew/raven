@@ -1,0 +1,17 @@
+<% flash.each do |key, value| %>
+    <div class="alert alert-warning">
+            <%= value %>
+      <a class="close" data-dismiss="alert">×</a>
+    </div>
+<% end %>
+
+
+
+<% @students.each do |s| %>
+<p>
+  <%= s.first_name + " " + s.last_name %>
+  <%= link_to 'x', s,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
+<% end %>
